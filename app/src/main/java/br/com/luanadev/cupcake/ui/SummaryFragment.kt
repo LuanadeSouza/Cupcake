@@ -24,7 +24,7 @@ class SummaryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    )= binding.root
+    ) = binding.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -59,5 +59,4 @@ class SummaryFragment : Fragment() {
         sharedViewModel.resetOrder()
         findNavController().navigate(R.id.action_summaryFragment_to_startFragment)
     }
-
 }

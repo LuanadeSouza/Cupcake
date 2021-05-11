@@ -21,12 +21,12 @@ class FlavorFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ) = binding.root
+        savedInstanceState: Bundle?)
+    = binding.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
+        binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
             flavorFragment = this@FlavorFragment
@@ -38,10 +38,7 @@ class FlavorFragment : Fragment() {
     }
 
     fun cancelOrder() {
-        // Reset order in view model
         sharedViewModel.resetOrder()
-
-        // Navigate back to the [StartFragment] to start over
         findNavController().navigate(R.id.action_flavorFragment_to_startFragment)
     }
 }
